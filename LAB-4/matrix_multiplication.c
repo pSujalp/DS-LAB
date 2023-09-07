@@ -48,7 +48,8 @@ int main()
     for (int i = 0; i < r_a; i++) {
         for (int j = 0; j < c_b; j++) {
             int sum = 0;
-            for (int k = 0; k < c_a; k++) {
+            for (int k = 0; k < c_a; k++) 
+            {
                 sum += matrixA[i][k] * matrixB[k][j];
             }
             matrixC[i][j] = sum;
