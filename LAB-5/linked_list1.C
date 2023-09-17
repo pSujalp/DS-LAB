@@ -1,6 +1,6 @@
 /*Write a program to create a singly linked list of integers. Add an integer and delete an integer from the list and display the contents on the screen.*/
-//Name:Shashi Ranjan Jha
-//Roll.no : 2248030
+//Name:Sujit Kumar
+//Roll.no : 2248003
 //Date:14/09/2023
 #include <stdio.h>
 #include <stdlib.h>
