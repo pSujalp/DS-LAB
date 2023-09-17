@@ -51,6 +51,11 @@ void print_array(int *arr,int size)
 int main()
 {
     int arr[]={1,200,89,9,3};
+    printf("\nSelection sort of array\n");
     selection_sort(arr,5);
     print_array(arr,5);
+    printf("\nBubble sort of array\n");
+    bubble_sort(arr,5);
+    print_array(arr,5);
+
 }

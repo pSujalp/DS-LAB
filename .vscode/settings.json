@@ -17,6 +17,8 @@
         "divisible_5.C": "cpp",
         "Q_1_searching.C": "cpp",
         "bubble_selection.C": "cpp",
-        "searching.C": "cpp"
+        "searching.C": "cpp",
+        "linked_list.C": "cpp",
+        "linked_list1.C": "cpp"
     }
 }

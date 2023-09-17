@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "insertion_sort.C": "cpp",
+        "linked_list.C": "cpp",
+        "mergetwonodes.C": "cpp"
+    }
+}
