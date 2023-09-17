@@ -252,7 +252,7 @@ struct linked_list
 
 int main()
 {     
-        linked_list l;
+        linked_list * l;
         printf("Enter the no .of Nodes \n");
         int s;
         scanf("%d",&s);
@@ -260,11 +260,11 @@ int main()
         {
            int x;
            scanf("%d",&x);
-           l.push(x);
+           l->push(x);
         }
 
-        l.insert_at_middle(45,1);
-        l.erase(3);
-        l.display();
+        l->insert_at_middle(45,1);
+        l->erase(3);
+        l->display();
        
  }
