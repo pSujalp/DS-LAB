@@ -107,7 +107,7 @@ struct linked_list
      }
      void delete_at_beginning()
      {
-      Node * temp=head;
+      struct Node * temp=head;
       head->next=head;
       free(temp);
       s--;
@@ -147,8 +147,8 @@ struct linked_list
          }
          else if(i>0 && i<length()-1)
          {
-            Node * t=head;
-            Node * prev=NULL;
+            struct Node * t=head;
+            struct Node * prev=NULL;
             int j=0;
             while(j!=i)
             {
@@ -164,7 +164,7 @@ struct linked_list
      }
      int length()
      {
-        Node * t=head;
+        struct Node * t=head;
         int i=0;
         while(t!=NULL)
         {
@@ -176,7 +176,7 @@ struct linked_list
      int nth_node_from_end(int d)
      {
         int arr[length()];
-        Node * t=head;                 //space complexity : O(N)  // time complexity :O(N)
+        struct Node * t=head;                 //space complexity : O(N)  // time complexity :O(N)
         int i=0;
         while(t!=NULL)
         {
@@ -187,8 +187,8 @@ struct linked_list
      }
      bool checkcycle()
      {
-        Node * c=head;
-        Node * t=head->next;
+        struct Node * c=head;
+        struct Node * t=head->next;
         while(t!=NULL)                            //space complexity : O(1)  // time complexity :O(N)
         {                                              
            if(t->next==head) return true;
@@ -200,7 +200,7 @@ struct linked_list
      {
        int arr[length()];
        int i=0;                //space complexity : O(N)  // time complexity :O(1)
-       Node * t=head;
+       struct Node * t=head;
        while(t!=NULL)
        {
          arr[i++]=t->data;
@@ -212,22 +212,22 @@ struct linked_list
      {
         if(d<=head->data)
         {
-           Node * new1 = (Node*)malloc(sizeof(Node));
+           struct Node * new1 = (Node*)malloc(sizeof(Node));
            new1->data=d;
            new1->next=head;
            head=new1;
         }
         else if(d>=tail->data)
         {
-              Node * new1 = (Node*)malloc(sizeof(Node));
+              struct Node * new1 = (Node*)malloc(sizeof(Node));
               new1->data=d;
               tail->next=new1;
               tail=new1;
         }
         else 
         {
-            Node * t= head;
-            Node * prev=NULL;
+            struct Node * t= head;
+           struct  Node * prev=NULL;
             int c=0;
             while(t->next!=NULL)
             {
@@ -241,7 +241,7 @@ struct linked_list
             }
             if(c==1)
             {
-                Node * new1 = (Node*)malloc(sizeof(Node));
+                struct Node * new1 = (struct Node*)malloc(sizeof(Node));
                 new1->data=d;
                 prev->next=new1;
                 new1->next=t;
@@ -262,6 +262,9 @@ int main()
            scanf("%d",&x);
            l.push(x);
         }
-       l.insert_in_sorted_order(4);
-       l.display();
+
+        l.insert_at_middle(45,1);
+        l.erase(3);
+        l.display();
+       
  }
